@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="css/style_table1.css">
 <link rel="stylesheet" href="css/style_pages_btn.css">
 <link rel="stylesheet" href="css/style_wrapper.css">
-<script src="js/menu_js1.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" href="images/archive-logo-icon.png">
 
@@ -63,15 +62,21 @@ body {
 }
 
 .active {
+  background-color: #e31717;
+  color: white;
+}
+
+.class-1 {
   background-color: #ffd500;
   color: white;
 }
+
 
 .topnav .icon {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -79,7 +84,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .topnav.responsive {position: relative;}
   .active {visibility: hidden;}
   .topnav a {background-color: #9e1111}
@@ -101,8 +106,8 @@ body {
 
 <div class="topnav" id="myTopnav">
   <img src="images/va-logo.png" style="float: left; margin: 20px 10px 10px 10px" alt="sitelogo">
-  <a href="https://virus-archive.github.io/">Home</a>
-  <a href="https://virus-archive.github.io/about_service" class="active">About service</a>
+  <a href="https://virus-archive.github.io/" class="active">Home</a>
+  <a href="https://virus-archive.github.io/about_service" class="class-1">About service</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
