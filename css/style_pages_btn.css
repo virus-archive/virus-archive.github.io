@@ -48,7 +48,7 @@
       background: transparent;
       margin-left: 0;
       margin-right: 0; }
-    .paginate a.active {
+    .paginate a.active1 {
       box-shadow: rgba(0, 0, 0, 0.75) 0 0 0 0 inset;
       border-color: #ded037;
       color: #f2f2f2;
