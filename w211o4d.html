@@ -1,1 +1,379 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<style>
+* {
+margin: 0;
+padding: 0;
+font-family: Arial;
+}
+body {
+	background: #1b1b1b;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
+#bg1 {
+	background: url(https://otomkak.ru/wp-content/uploads/2022/06/img956102.jpg) no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 120%;
+	position: absolute;
+	opacity: .1;
+	z-index: -1;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	height: 820px;
+	max-width: 95%;
+	background: #292929;
+	border-radius: 6px;
+	margin: 50px 0;
+	
+}
+
+.main .top {
+	background: 0;
+	margin-top: 40px;
+}
+
+.main .top h1 {
+	font-weight: bold;
+	text-align: center;
+}
+.main .top h1 span {
+	background: #ffa31a;
+	color: #1b1b1b;
+	padding: 8px;
+	margin: 5px;
+	border-radius: 8px;
+}
+.main .top h1 font {
+	font-weight: 400;
+	font-style: italic;
+	color: #808080;
+	font-size: 18px;
+	padding-top: 10px;
+	display: inline-block;
+}
+
+
+
+
+.main .middle {
+	text-align: center;
+	margin-top: 30px;
+}
+.main .middle h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+}
+.main .middle h2 span{
+	color: #ffa31a;
+	font-weight: 700;
+	font-size: 42px;
+	margin-left: 10px;
+}
+
+
+
+  input[type='checkbox'], input[type='radio'] {
+    --active: #ffa31a;
+    --active-inner: #fff;
+    --focus: 2px rgba(255, 163, 26, .3);
+    --border: #ffa31a;
+    --border-hover: #ffa31a;
+    --background: #1b1b1b;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+  }
+  input[type='checkbox']:after, input[type='radio']:after {
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+  }
+  input[type='checkbox']:checked, input[type='radio']:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: 0.3s;
+    --d-t: 0.6s;
+    --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+  }
+  input[type='checkbox']:disabled, input[type='radio']:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+  input[type='checkbox']:disabled:checked, input[type='radio']:disabled:checked {
+    --b: var(--disabled-inner);
+    --bc: var(--border);
+  }
+  input[type='checkbox']:disabled + label, input[type='radio']:disabled + label {
+    cursor: not-allowed;
+  }
+  input[type='checkbox']:hover:not(:checked):not(:disabled), input[type='radio']:hover:not(:checked):not(:disabled) {
+    --bc: var(--border-hover);
+  }
+  input[type='checkbox']:focus, input[type='radio']:focus {
+    box-shadow: 0 0 0 var(--focus);
+  }
+  input[type='checkbox']:not(.switch), input[type='radio']:not(.switch) {
+    width: 21px;
+  }
+  input[type='checkbox']:not(.switch):after, input[type='radio']:not(.switch):after {
+    opacity: var(--o, 0);
+  }
+  input[type='checkbox']:not(.switch):checked, input[type='radio']:not(.switch):checked {
+    --o: 1;
+  }
+  input[type='checkbox'] + label, input[type='radio'] + label {
+    font-size: 14px;
+    line-height: 21px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+  input[type='checkbox']:not(.switch) {
+    border-radius: 7px;
+  }
+  input[type='checkbox']:not(.switch):after {
+    width: 5px;
+    height: 9px;
+    border: 2px solid var(--active-inner);
+    border-top: 0;
+    border-left: 0;
+    left: 7px;
+    top: 4px;
+    transform: rotate(var(--r, 20deg));
+  }
+  input[type='checkbox']:not(.switch):checked {
+    --r: 43deg;
+  }
+  input[type='checkbox'].switch {
+    width: 38px;
+    border-radius: 11px;
+  }
+  input[type='checkbox'].switch:after {
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--ab, var(--border));
+    transform: translateX(var(--x, 0));
+  }
+  input[type='checkbox'].switch:checked {
+    --ab: var(--active-inner);
+    --x: 17px;
+  }
+  input[type='checkbox'].switch:disabled:not(:checked):after {
+    opacity: 0.6;
+  }
+  input[type='radio'] {
+    border-radius: 50%;
+  }
+  input[type='radio']:after {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: var(--active-inner);
+    opacity: 0;
+    transform: scale(var(--s, 0.7));
+  }
+  input[type='radio']:checked {
+    --s: 0.5;
+  }
+}
+ul {
+  margin: 12px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 320px;
+}
+ul li {
+  margin: 16px 0;
+  position: relative;
+}
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 100%;
+  margin-top: 15px;
+}
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #808080;
+  outline: 0;
+  font-size: 16px;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 16px;
+  cursor: text;
+  top: 20px;
+}
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 16px;
+  color: #808080;
+}
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #ffa31a, #ffa31a);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 16px;
+  color: #ffa31a;
+  font-weight: 700;
+}
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+
+
+
+
+
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */ 
+
+
+.forma {
+text-align: left;
+padding: 0 50px;
+}
+
+#btn {
+	background: #ffa31a;
+	color: #fff;
+	width: 100%;
+	border-radius: 6px;
+	padding: 15px;
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	transition: .2s;
+}
+#btn:hover {
+	background: rgba(255, 163, 26, .8);
+}
+</style>
+
+<body>
+	<div id="bg1"></div>
+	
+	<div class="main">
+		<div class="top">
+			<h1>Ivan<span>Hub</span><br><font>CASINO</font></h1>
+		</div>
+		
+		<div class="middle">
+			<h1>Congratulations!</h1>
+			<h2>You won <span>$1,032,210</span></h2>
+			<br><br>
+			<p style="color: #808080; text-align: left; margin-left: 50px; font-weight: bold;">Fill out this form to receive money:</p><br>
+			<div class="forma">
+				<input id="c2" type="checkbox">
+				<label for="c2">Do you want claim this money?</label>
+				
+				<div class="form__group field">
+				  <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+				  <label for="name" class="form__label">Name Surname</label>
+				</div>
+				<div class="form__group field">
+				  <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+				  <label for="name" class="form__label">Your mom card number and CVC</label>
+				</div>
+				<div class="form__group field">
+				  <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+				  <label for="name" class="form__label">Adress</label>
+				</div>
+				<div class="form__group field">
+				  <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+				  <label for="name" class="form__label">Phone number</label>
+				</div>
+				<br>
+				<input id="c2" type="checkbox">
+				<label for="c2">I accept with all terms</label><br><br>
+				<input id="c2" type="checkbox">
+				<label for="c2">I accept all cookies</label><br><br>
+				<input id="c2" type="checkbox">
+				<label for="c2">I have more than 14 years old</label>
+				
+				
+				<br><br><br>
+				<a id="btn">Claim money NOW!</a>
+			</div>
+		</div>
+		
+		
+	</div>
+</body>
+
+</html>
